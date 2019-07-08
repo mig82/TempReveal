@@ -1,0 +1,68 @@
+{
+  "android": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "androidwearos": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "background_color": "8f8f8f00",
+  "bg_type": "one",
+  "border_color": "42424200",
+  "border_radius": 100,
+  "border_style": "custom",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "font_color": "ffffffff",
+  "font_name": "SwipeRightGestureRegular",
+  "font_size": 200,
+  "font_style": "normal",
+  "font_weight": "400",
+  "ipad": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "iphone": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "isDefaultSkin": false,
+  "kiosk": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "kuid": "sa984e7d0c7545de9e82013335b24222",
+  "spaan": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spaandroidtablet": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spabb": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spaip": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spaipad": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spawindowstablet": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "spawinphone8": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "tabrcandroid": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "wType": "Label",
+  "watchos": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "windows8": {
+    "font_name": "SwipeRightGestureRegular"
+  },
+  "winphone8": {
+    "font_name": "SwipeRightGestureRegular"
+  }
+}
