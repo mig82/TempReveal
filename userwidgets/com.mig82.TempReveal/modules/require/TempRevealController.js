@@ -48,6 +48,7 @@ define(["./animateReveal"], function(animateReveal) {
 				animateReveal(this.view.lidFlex, false)
 				.then(() => {
 					this.view.gestureIconLabel.isVisible = true;
+					this.onSecretHidden();
 				});
 			}
 		},
@@ -62,6 +63,7 @@ define(["./animateReveal"], function(animateReveal) {
 			animateReveal(this.view.lidFlex, true)
 			.then(() => {
 				this.startCountDown();
+				this.onSecretShown();
 			});
 		},
 

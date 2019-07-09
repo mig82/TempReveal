@@ -6,12 +6,41 @@
             "passthrough": []
         },
         "events": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "Events",
+                    "kuid": "d32ed4bf53874694a82face38c0a13d9",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSecretShown",
+                    "pw": {
+                        "displayName": "onSecretShown",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "fd3c0c9f1cc648b6a39bbeddae6aa037",
+                    "type": "event"
+                },
+                {
+                    "group": "Events",
+                    "kuid": "hb5ee9462c5e45d49e52defb9aaa1a35",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "onSecretHidden",
+                    "pw": {
+                        "displayName": "onSecretHidden",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "fd3c0c9f1cc648b6a39bbeddae6aa037",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "groups": {
             "apis": [],
-            "events": [],
+            "events": [
+                "Events"
+            ],
             "properties": [],
             "widgets": []
         },
