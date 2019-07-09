@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "70%"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,

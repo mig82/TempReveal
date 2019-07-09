@@ -30,7 +30,7 @@ define(["./animateReveal"], function(animateReveal) {
 
 		countDown: function(){
 			this.view.counterLabel.text = Math.floor(--this.timer);
-			kony.print("*******Updating clock:" + this.timer);
+			//kony.print("*******Updating clock:" + this.timer);
 
 			if(this.timer >= 8){
 				this.view.clockIconLabel.text = SAND_FULL;
