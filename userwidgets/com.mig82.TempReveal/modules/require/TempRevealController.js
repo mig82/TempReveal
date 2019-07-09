@@ -74,17 +74,17 @@ define(["./animateReveal"], function(animateReveal) {
 
 		postShow: function(){
 
-			if(typeof window === "function"){
-				this.view.gestureIconLabel.onTouchEnd = this.onTouchOrSwipeToReveal;
-				kony.print("*******Added onTouchEnd");
-			}
-			else{
+			if(typeof this.view.lidFlex.setGestureRecognizer === "function"){
 				this.view.lidFlex.setGestureRecognizer(2, {
 					fingers: 1,
 					swipedistance: 50,
 					swipevelocity: 75
 				}, this.onTouchOrSwipeToReveal);
 				kony.print("*******Added gesture recogniser");
+			}
+			else{
+				this.view.gestureIconLabel.onTouchEnd = this.onTouchOrSwipeToReveal;
+				kony.print("*******Added onTouchEnd");
 			}
 		},
 
