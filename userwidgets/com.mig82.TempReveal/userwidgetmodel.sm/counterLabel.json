@@ -3,8 +3,8 @@
     "DNDConfig": null,
     "__parentReadjusting__": false,
     "_height_": {
-        "type": "string",
-        "value": "30dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         1,
@@ -20,13 +20,13 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "10dp"
+        "value": "50dp"
     },
-    "_skin_": "s1360ac7e7fd49109575d203cdc5c6b6",
-    "_text_": "",
+    "_skin_": "s015384f824a4fe2a6ce23e7a9ae03b4",
+    "_text_": "10",
     "_width_": {
-        "type": "string",
-        "value": "30dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -41,8 +41,8 @@
         "value": "50%"
     },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "clockIconLabel",
+    "contentalignment": 6,
+    "id": "counterLabel",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c42a6b5e09aa4d4490a78282b244a4e5",
+    "kuid": "ed42dd810b024314a94d86594b8644a7",
     "name": "kony.ui.Label",
     "parent": "topFlex",
     "pf": "userwidgetmodel",

@@ -38,7 +38,8 @@
     "children": [
         "secretImage",
         "lidFlex",
-        "clockIconLabel"
+        "clockIconLabel",
+        "counterLabel"
     ],
     "clipbounds": true,
     "containerweight": 100,

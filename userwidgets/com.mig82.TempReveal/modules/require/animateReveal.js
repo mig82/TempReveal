@@ -22,16 +22,20 @@ define(function () {
 
 	function animateReveal(lidFlex){
 
-		try{
-			var animation = kony.ui.createAnimation(steps);
-			lidFlex.animate(animation, config, {
-				animationStart: doNothing,
-				animationEnd: doNothing
-			});
-		}
-		catch(e){
-			kony.print(`Problem animating:\n\t${e}`);
-		}
+		var animPromise = new Promise(function(resolve, reject) {
+			try{
+				var animation = kony.ui.createAnimation(steps);
+				lidFlex.animate(animation, config, {
+					animationStart: doNothing,
+					animationEnd: resolve
+				});
+			}
+			catch(e){
+				kony.print(`Problem animating:\n\t${e}`);
+				reject(e);
+			}
+		});
+		return animPromise;
 	}
 
     return animateReveal;
