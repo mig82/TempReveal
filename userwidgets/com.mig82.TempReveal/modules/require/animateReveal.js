@@ -20,7 +20,10 @@ define(function () {
 		"fillMode": kony.anim.FILL_MODE_FORWARDS
 	};
 
-	function animateReveal(lidFlex){
+	function animateReveal(lidFlex, slideRight){
+
+		//If slideRight is true, then move to 50% from left. Otherwise move back to 0% from left.
+		steps["100"].left = slideRight?"50%":"0%";
 
 		var animPromise = new Promise(function(resolve, reject) {
 			try{

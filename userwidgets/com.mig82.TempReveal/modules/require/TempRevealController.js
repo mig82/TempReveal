@@ -10,6 +10,11 @@ define(["./animateReveal"], function(animateReveal) {
 	const SAND_DONE = "\uF253";
 
 	return {
+		resetCounter: function(){
+			this.view.counterLabel.text = this.timer = Math.floor(duration);
+			this.view.clockIconLabel.text = SAND_FULL;
+		},
+
 		toggleCountAndClockVisibility: function(){
 			var counterLabel = this.view.counterLabel;
 			var clockIconLabel = this.view.clockIconLabel;
@@ -22,8 +27,9 @@ define(["./animateReveal"], function(animateReveal) {
 				counterLabel.zIndex = clockIconLabel.zIndex = this.clockZ;
 			}
 		},
+
 		countDown: function(){
-			this.view.counterLabel.text = --this.timer;
+			this.view.counterLabel.text = Math.floor(--this.timer);
 			kony.print("*******Updating clock:" + this.timer);
 
 			if(this.timer >= 8){
@@ -38,31 +44,36 @@ define(["./animateReveal"], function(animateReveal) {
 			else{
 				kony.timer.cancel(timerId);
 				this.toggleCountAndClockVisibility();
+				this.resetCounter();
+				animateReveal(this.view.lidFlex, false)
+				.then(() => {
+					this.view.gestureIconLabel.isVisible = true;
+				});
 			}
 		},
 
 		startCountDown: function(){
-			this.view.counterLabel.text = this.timer = duration;
+			this.resetCounter();
 			this.toggleCountAndClockVisibility();
 			kony.timer.schedule(timerId, this.countDown, 1, true);
 		},
 
 		reveal: function(){
-			animateReveal(this.view.lidFlex)
+			animateReveal(this.view.lidFlex, true)
 			.then(() => {
 				this.startCountDown();
 			});
 		},
 
-		preShow: function(){
-			this.view.lidFlex.left = "0%";
-			this.toggleCountAndClockVisibility();
+		onTouchOrSwipeToReveal: function(){
+			this.reveal();
+			this.view.gestureIconLabel.isVisible = false;
 		},
 
 		postShow: function(){
 
 			if(typeof window === "function"){
-				this.view.gestureIconLabel.onTouchEnd = this.reveal;
+				this.view.gestureIconLabel.onTouchEnd = this.onTouchOrSwipeToReveal;
 				kony.print("*******Added onTouchEnd");
 			}
 			else{
@@ -70,9 +81,14 @@ define(["./animateReveal"], function(animateReveal) {
 					fingers: 1,
 					swipedistance: 50,
 					swipevelocity: 75
-				}, this.reveal);
+				}, this.onTouchOrSwipeToReveal);
 				kony.print("*******Added gesture recogniser");
 			}
+		},
+
+		preShow: function(){
+			this.view.lidFlex.left = "0%";
+			this.toggleCountAndClockVisibility();
 		},
 
 		onHide: function(){},
